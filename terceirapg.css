@@ -104,7 +104,8 @@ button:hover {
     color: #cbd5e1;
 }
 
-#resultado strong {
+.result-box span {
     color: #10b981;
     font-size: 1.4rem;
+    font-weight: bold;
 }
