@@ -1,4 +1,6 @@
-/* Configurações Gerais */
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS E BODY
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -13,51 +15,54 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    /* Removido o padding do body que quebrava o menu de 100% */
 }
 
-/* Menu de Navegação das 4 Páginas */
+/* ==========================================================================
+   2. MENU DE NAVEGAÇÃO (Igualzinho à imagem image_dc29c4.png)
+   ========================================================================== */
 .nav-container {
+    width: 100%; /* Força o menu a ocupar a tela inteira */
     background: #1e293b;
-    padding: 15px;
-    width: 100%;
-    max-width: 600px;
+    padding: 15px 0; /* Padding vertical apenas */
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-    border-radius: 15px 15px 0 0;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .nav-link {
     color: #94a3b8;
     text-decoration: none;
     font-weight: bold;
-    padding: 6px 12px;
+    padding: 6px 14px;
     border-radius: 6px;
     transition: 0.2s;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .nav-link:hover {
     color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.05);
 }
 
+/* Estado ativo idêntico à foto */
 .nav-link.active {
-    background: linear-gradient(to right, #38bdf8, #10b981);
-    color: #ffffff;
+    background-color: rgba(16, 185, 129, 0.15); /* Fundo verde escuro bem sutil */
+    color: #10b981;                             /* Texto verde destacado */
 }
 
-/* Container do Conversor */
+/* ==========================================================================
+   3. CONTAINER DO CONVERSOR (Centralizado e flutuando na tela)
+   ========================================================================== */
 .container {
     background: #1e293b;
-    border-radius: 0 0 15px 15px;
+    border-radius: 15px; /* Totalmente arredondado */
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     padding: 30px;
-    width: 100%;
-    max-width: 600px;
+    width: 90%;
+    max-width: 450px; /* Tamanho exato do padrão */
+    margin: 60px auto; /* Afasta do menu do topo e centraliza na tela */
     text-align: center;
 }
 
@@ -74,13 +79,14 @@ h1 {
     font-size: 1.1rem;
     color: #94a3b8;
     margin-bottom: 25px;
-    text-align: center;
 }
 
-/* Formulário e Input */
+/* ==========================================================================
+   4. FORMULÁRIOS, INPUTS E BOTÕES
+   ========================================================================== */
 .input-group {
     margin-bottom: 25px;
-    text-align: left; /* Garante que o label fique alinhado à esquerda do input */
+    text-align: left; /* Alinha o label acima do input */
 }
 
 label {
@@ -107,7 +113,6 @@ input[type="number"]:focus {
     border-color: #38bdf8;
 }
 
-/* Botão */
 button {
     width: 100%;
     padding: 12px 24px;
@@ -125,14 +130,16 @@ button:hover {
     opacity: 0.9;
 }
 
-/* Caixa de Resultado */
+/* ==========================================================================
+5. CAIXA DE RESULTADO
+   ========================================================================== */
 .result-box {
     margin-top: 25px;
     background: #0f172a;
     padding: 20px;
     border-radius: 10px;
     border-left: 4px solid #38bdf8;
-    display: none; /* Oculto inicialmente */
+    display: none; /* Controlado via JS */
     text-align: left;
 }
 
