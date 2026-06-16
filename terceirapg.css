@@ -33,10 +33,6 @@ nav a {
     transition: 0.2s;
 }
 
-nav a:hover, nav a.active {
-    color: #10b981;
-    background: rgba(16, 185, 129, 0.1);
-}
 
 .container {
     max-width: 450px;
