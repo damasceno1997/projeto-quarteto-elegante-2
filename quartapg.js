@@ -3,12 +3,17 @@ const btnGerar = document.getElementById('btnGerar');
 const divResultado = document.getElementById('resultado');
 
 function converterTempo() {
-    const minutos = Number(inputNumero.value);
+    // 1. Pegamos o valor como string primeiro para validar
+    const valorInput = inputNumero.value.trim();
 
-    if (inputNumero.value === "") {
+    // 2. Validação: verifica se está vazio ou se NÃO é um número (isNaN)
+    if (valorInput === "" || isNaN(valorInput)) {
         alert("Por favor, digite um número válido!");
         return;
     }
+
+    // 3. Agora que está validado, transformamos em número com segurança
+    const minutos = Number(valorInput);
 
     divResultado.innerHTML = "";
     divResultado.style.display = "block";
